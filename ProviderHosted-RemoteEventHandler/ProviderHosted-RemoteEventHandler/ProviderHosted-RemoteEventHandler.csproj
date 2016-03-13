@@ -22,6 +22,7 @@
     <WorkflowPartId>{a8f83597-2020-4ee8-aaa7-5619f29e3ca8}</WorkflowPartId>
     <CspkgPartId>{8303add8-be63-4fbc-ad40-dd78655ad382}</CspkgPartId>
     <SqlPackagePartId>{fd5d3f93-793a-4c36-8945-ee5d5b2a7033}</SqlPackagePartId>
+    <ActivePublishProfile>SP-ProviderHosted-RemoteEventHandler - Web Deploy</ActivePublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +47,13 @@
     <Content Include="AppIcon.png">
       <OpcRelationship>manifest-icon</OpcRelationship>
     </Content>
+    <Content Include="DocumentRemoteEventReceiver\Elements.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <AppManifestFile Include="AppManifest.xml">
@@ -65,6 +73,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DocumentRemoteEventReceiver\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{73b9da3e-9948-469d-884e-c896a3444576}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{a8115488-ac82-4397-8c7b-854ed2058f5e}</FeatureId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{e6b98ef9-eab7-42e7-9f30-5b159f17b7b7}</PackageId>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

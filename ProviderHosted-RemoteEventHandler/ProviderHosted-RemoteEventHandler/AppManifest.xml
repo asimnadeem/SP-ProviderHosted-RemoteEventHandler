@@ -9,9 +9,11 @@
   <Properties>
     <Title>ProviderHosted-RemoteEventHandler</Title>
     <StartPage>~remoteAppUrl/?{StandardTokens}</StartPage>
+    <InstalledEventEndpoint>~remoteAppUrl/Services/AppEventReceiver.svc</InstalledEventEndpoint>
+    <UninstallingEventEndpoint>~remoteAppUrl/Services/AppEventReceiver.svc</UninstallingEventEndpoint>
   </Properties>
 
   <AppPrincipal>
-    <RemoteWebApplication ClientId="*" />
+    <RemoteWebApplication ClientId="3d248c3d-1435-43bb-a4bc-3df8650f27ff" />
   </AppPrincipal>
 </App>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListTemplateId="171">
+    <Receiver>
+      <Name>DocumentRemoteEventReceiverItemAdding</Name>
+      <Type>ItemAdding</Type>
+      <SequenceNumber>10000</SequenceNumber>
+      <Url>https://sp-providerhosted-remoteeventhandler.azurewebsites.net</Url>
+    </Receiver>
+    <Receiver>
+      <Name>DocumentRemoteEventReceiverItemAttachmentAdded</Name>
+      <Type>ItemAttachmentAdded</Type>
+      <SequenceNumber>10000</SequenceNumber>
+      <Url>https://sp-providerhosted-remoteeventhandler.azurewebsites.net</Url>
+    </Receiver>
+  </Receivers>
+</Elements>
